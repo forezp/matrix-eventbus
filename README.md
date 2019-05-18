@@ -10,6 +10,15 @@
 
 ## 怎么用
 
+```$xslt
+
+<dependency>
+  <groupId>io.github.forezp</groupId>
+  <artifactId>matrix-eventbus-starter</artifactId>
+  <version>1.0</version>
+</dependency>
+```
+
 ### 开启
 
 ```$xslt
