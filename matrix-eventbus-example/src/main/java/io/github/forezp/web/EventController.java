@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by forezp on 2019/5/17.
  */
 @RestController
-@EnableEventBus
 public class EventController {
 
     Logger logger=LoggerFactory.getLogger(EventController.class);
@@ -25,8 +24,10 @@ public class EventController {
     @GetMapping("/test")
     public String test(){
         logger.info(Thread.currentThread().getName()+" aysnc post :lucy");
+        //发送异步消息
         eventBusControllerFactory.getAsyncController().post(new Event("lucy"));
         logger.info(Thread.currentThread().getName()+"  sync post :lily");
+        //发送同步消息
         eventBusControllerFactory.getSyncController().post(new Event("lily"));
 
         logger.info("ok");
