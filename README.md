@@ -2,7 +2,7 @@
 
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?label=license)](https://github.com/forezp/matrix-eventbus/blob/master/LICENSE)
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.forezp/matrix-eventbus-starter.svg?label=maven%20central)](http://mvnrepository.com/artifact/io.github.forezp/scrorpio)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.forezp/matrix-eventbus-starter.svg?label=maven%20central)](http://mvnrepository.com/artifact/io.github.forezp/matrix-eventbus-starter)
 
 ## 这个项目干嘛的?
 
