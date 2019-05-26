@@ -5,6 +5,8 @@ import com.google.common.eventbus.AsyncEventBus;
 import com.google.common.eventbus.EventBus;
 import io.github.forezp.constant.EventBusConstants;
 import io.github.forezp.scrorpio.concurrent.threadpool.ThreadPoolFactory;
+import io.github.forezp.scrorpio.enums.ThreadQueueType;
+import io.github.forezp.scrorpio.enums.ThreadRejectedPolicyType;
 
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -54,7 +56,7 @@ public class EventBusControllerFactory {
                 if (eventBusControllerAsync != null) {
                     return eventBusControllerAsync;
                 } else {
-                    eventBusControllerAsync = new EventBusController(new AsyncEventBus(identifier, ThreadPoolFactory.createDefaultPoolExecutor()));
+                    eventBusControllerAsync = new EventBusController(new AsyncEventBus(identifier, ThreadPoolFactory.createThreadPoolExecutor(EventBusConstants.PUBLIC_EVENTBUS,4,8, Long.valueOf(30000L), ThreadQueueType.LINKED_BLOCKING_QUEUE.getValue(), 5000, ThreadRejectedPolicyType.CALLER_RUNS_POLICY_WITH_REPORT.getValue())));
                     asyncEventBusControllerMap.putIfAbsent(identifier, eventBusControllerAsync);
                     return eventBusControllerAsync;
                 }

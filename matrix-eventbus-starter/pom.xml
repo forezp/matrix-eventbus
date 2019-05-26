@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.github.forezp</groupId>
     <artifactId>matrix-eventbus-starter</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>matrix-eventbus-starter</name>
     <description>Demo project for Spring Boot</description>
     <url>https://github.com/forezp</url>
